@@ -7,14 +7,14 @@
   function makeMats() {
     return {
       plate: new THREE.MeshStandardMaterial({
-        color: 0xb8cce0,
+        color: 0xa8c8e8,
         metalness: 0.9,
         roughness: 0.22,
         emissive: 0x1a2838,
         emissiveIntensity: 0.12
       }),
       plateBright: new THREE.MeshStandardMaterial({
-        color: 0xd8e6f2,
+        color: 0xc8dcf5,
         metalness: 0.95,
         roughness: 0.12,
         emissive: 0x203040,
@@ -33,7 +33,7 @@
         roughness: 0.4
       }),
       accent: new THREE.MeshStandardMaterial({
-        color: 0xe11d1d,
+        color: 0x0ea5e9,
         metalness: 0.5,
         roughness: 0.35,
         emissive: 0x3a0808,

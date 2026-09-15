@@ -3,7 +3,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 22px;
+  padding: 13px 26px;
   background: var(--color-accent);
   color: #fff;
   font-weight: 600;
@@ -11,6 +11,7 @@
   border-radius: var(--radius-sm);
   transition: background var(--duration), transform var(--duration), box-shadow var(--duration);
   border: 1px solid transparent;
+  letter-spacing: 0.01em;
 }
 
 .btn:hover {
@@ -18,6 +19,10 @@
   color: #fff;
   transform: translateY(-1px);
   box-shadow: var(--shadow-glow);
+}
+
+.btn:active {
+  transform: translateY(0);
 }
 
 .btn--ghost {
@@ -40,13 +45,14 @@
   font-weight: 600;
   color: var(--color-accent);
   margin-top: var(--space-lg);
+  transition: gap var(--duration) var(--ease-out);
 }
 
 .text-link:hover {
   gap: 10px;
 }
 
-/* Cards */
+/* Cards — shared base */
 .feature-card,
 .facility-card,
 .client-card,
@@ -58,7 +64,8 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--space-xl);
-  transition: border-color var(--duration), background var(--duration), transform var(--duration);
+  transition: border-color var(--duration), background var(--duration), transform var(--duration), box-shadow var(--duration);
+  box-shadow: var(--shadow-card);
 }
 
 .feature-card:hover,
@@ -68,7 +75,8 @@
 .mini-product:hover {
   border-color: var(--color-border-strong);
   background: var(--color-bg-card-hover);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
 }
 
 /* Process cards */
@@ -119,17 +127,17 @@
   font-family: var(--font-display);
   font-size: 3.5rem;
   font-weight: 800;
-  color: rgba(201, 212, 222, 0.06);
+  color: rgba(201, 212, 222, 0.04);
   line-height: 1;
   pointer-events: none;
 }
 
 .process-card--nickel .process-mark {
-  color: rgba(59, 130, 246, 0.08);
+  color: rgba(14, 165, 233, 0.06);
 }
 
 .process-card--iron .process-mark {
-  color: rgba(234, 179, 8, 0.08);
+  color: rgba(245, 158, 11, 0.06);
 }
 
 .process-particles {
@@ -145,7 +153,7 @@
   height: 4px;
   border-radius: 50%;
   background: var(--color-accent);
-  opacity: 0.3;
+  opacity: 0.25;
   animation: float-particle 6s ease-in-out infinite;
 }
 
@@ -156,8 +164,8 @@
 .process-particles i:nth-child(5) { top: 55%; left: 50%; animation-delay: 1.5s; }
 
 @keyframes float-particle {
-  0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; }
-  50% { transform: translateY(-20px) scale(1.3); opacity: 0.6; }
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.25; }
+  50% { transform: translateY(-20px) scale(1.3); opacity: 0.5; }
 }
 
 /* Chips */
@@ -171,13 +179,18 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 8px 14px;
+  padding: 8px 16px;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 50px;
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--color-text);
+  transition: border-color var(--duration);
+}
+
+.chip:hover {
+  border-color: var(--color-border-strong);
 }
 
 .chip small {
@@ -201,8 +214,8 @@
 
 .finish-strip > p {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-text-dim);
   margin: 0;
@@ -249,11 +262,13 @@
   padding: var(--space-2xl);
   position: relative;
   overflow: hidden;
-  transition: border-color var(--duration);
+  transition: border-color var(--duration), box-shadow var(--duration);
+  box-shadow: var(--shadow-card);
 }
 
 .product-card:hover {
   border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-card-hover);
 }
 
 .product-number {
@@ -263,7 +278,7 @@
   font-family: var(--font-display);
   font-size: 4rem;
   font-weight: 800;
-  color: rgba(201, 212, 222, 0.05);
+  color: rgba(201, 212, 222, 0.04);
   line-height: 1;
 }
 
@@ -273,10 +288,10 @@
   align-items: center;
   justify-content: center;
   background:
-    radial-gradient(circle at 50% 50%, rgba(120, 160, 210, 0.16), transparent 65%),
-    radial-gradient(circle at 50% 80%, rgba(225, 29, 29, 0.05), transparent 50%);
+    radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.08), transparent 65%),
+    radial-gradient(circle at 50% 80%, rgba(14, 165, 233, 0.04), transparent 50%);
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(140, 170, 200, 0.12);
+  border: 1px solid rgba(120, 160, 210, 0.08);
   min-height: 260px;
   overflow: visible;
 }
@@ -340,10 +355,10 @@
   height: 140px;
   aspect-ratio: 1;
   margin-bottom: var(--space-md);
-  background: radial-gradient(circle at 50% 50%, rgba(100, 150, 200, 0.15), transparent 70%);
+  background: radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.08), transparent 70%);
   border-radius: var(--radius-md);
   overflow: visible;
-  border: 1px solid rgba(150, 180, 210, 0.12);
+  border: 1px solid rgba(120, 160, 210, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -407,18 +422,19 @@
   font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   color: var(--color-metal);
-  padding: 12px 24px;
+  padding: 14px 28px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: var(--color-bg-card);
-  transition: border-color var(--duration), color var(--duration);
+  transition: border-color var(--duration), color var(--duration), box-shadow var(--duration);
 }
 
 .oem-badge:hover {
   border-color: var(--color-accent);
   color: var(--color-text);
+  box-shadow: 0 0 24px var(--color-accent-glow);
 }
 
 .client-grid {
@@ -438,7 +454,7 @@
 
 /* Quality / Certificate */
 .certificate {
-  background: linear-gradient(155deg, #121820 0%, #0a0e14 100%);
+  background: linear-gradient(155deg, #0e1420 0%, #080c14 100%);
   border: 1px solid var(--color-border-strong);
   border-radius: var(--radius-lg);
   padding: var(--space-xl) var(--space-xl) var(--space-2xl);
@@ -454,7 +470,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 2px;
   background: linear-gradient(90deg, var(--color-accent), var(--color-zinc));
 }
 
@@ -462,8 +478,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
   color: var(--color-text-dim);
   margin-bottom: var(--space-lg);
   gap: var(--space-md);
@@ -486,7 +502,7 @@
 }
 
 .certificate__fields p {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: var(--color-text-dim);
   display: flex;
   justify-content: space-between;
@@ -526,7 +542,7 @@
   text-align: center;
   line-height: 1.15;
   letter-spacing: 0.06em;
-  background: rgba(34, 197, 94, 0.1);
+  background: rgba(16, 185, 129, 0.08);
   box-shadow: 0 0 24px var(--color-success-glow);
 }
 
@@ -548,7 +564,7 @@
   border: 2px solid var(--color-accent);
   border-radius: 50%;
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 700;
   text-align: center;
   line-height: 1.2;
@@ -576,8 +592,8 @@
 
 .standards > p {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
   color: var(--color-text-dim);
   margin-bottom: var(--space-md);
 }
@@ -608,6 +624,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
+  box-shadow: var(--shadow-card);
 }
 
 .field {
@@ -630,13 +647,14 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   color: var(--color-text);
-  transition: border-color var(--duration);
+  transition: border-color var(--duration), box-shadow var(--duration);
 }
 
 .field input:focus,
 .field select:focus,
 .field textarea:focus {
   border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-muted);
 }
 
 .field textarea {
@@ -677,12 +695,12 @@
 .timeline-year {
   display: inline-block;
   font-family: var(--font-mono);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 500;
   color: var(--color-accent);
   background: var(--color-bg);
-  padding: 6px 14px;
-  border: 1px solid var(--color-accent);
+  padding: 6px 16px;
+  border: 1px solid var(--color-accent-muted);
   border-radius: 50px;
   margin-bottom: var(--space-md);
   position: relative;
@@ -737,7 +755,7 @@
 }
 
 .mission-list li::before {
-  content: '→';
+  content: '\2192';
   position: absolute;
   left: 0;
   color: var(--color-accent);

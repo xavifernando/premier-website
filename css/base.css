@@ -58,7 +58,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
   font-weight: 700;
   line-height: 1.15;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
+  color: var(--color-text);
 }
 
 p {
@@ -80,6 +81,7 @@ em {
   color: #fff;
 }
 
+/* Skip link */
 .skip-link {
   position: absolute;
   top: -100%;
@@ -96,13 +98,14 @@ em {
   top: var(--space-md);
 }
 
+/* Scroll progress */
 .scroll-progress {
   position: fixed;
   top: 0;
   left: 0;
-  height: 3px;
+  height: 2px;
   width: 0%;
-  background: linear-gradient(90deg, var(--color-accent), #ff6b35);
+  background: linear-gradient(90deg, var(--color-accent), var(--color-warm));
   z-index: 9999;
   transition: width 50ms linear;
   pointer-events: none;
@@ -111,8 +114,8 @@ em {
 /* Reveal animations */
 [data-reveal] {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+  transform: translateY(32px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
 }
 
 [data-reveal].is-visible {
