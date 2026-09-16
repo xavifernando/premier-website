@@ -47,7 +47,7 @@
   const points = new THREE.Points(geometry, material);
   scene.add(points);
 
-  // Accent teal particles
+  // Accent red particles
   const accentCount = 40;
   const accentPos = new Float32Array(accentCount * 3);
   const accentVel = [];
@@ -65,7 +65,7 @@
   accentGeo.setAttribute('position', new THREE.BufferAttribute(accentPos, 3));
   const accentMat = new THREE.PointsMaterial({
     size: 0.09,
-    color: 0x0ea5e9,
+    color: 0x2b7de9,
     transparent: true,
     opacity: 0.7,
     sizeAttenuation: true,
@@ -73,33 +73,6 @@
   });
   const accentPoints = new THREE.Points(accentGeo, accentMat);
   scene.add(accentPoints);
-
-  // Warm amber particles
-  const warmCount = 24;
-  const warmPos = new Float32Array(warmCount * 3);
-  const warmVel = [];
-  for (let i = 0; i < warmCount; i++) {
-    warmPos[i * 3] = (Math.random() - 0.5) * 13;
-    warmPos[i * 3 + 1] = (Math.random() - 0.5) * 7;
-    warmPos[i * 3 + 2] = (Math.random() - 0.5) * 5;
-    warmVel.push({
-      x: (Math.random() - 0.5) * 0.011,
-      y: (Math.random() - 0.5) * 0.009,
-      z: (Math.random() - 0.5) * 0.005
-    });
-  }
-  const warmGeo = new THREE.BufferGeometry();
-  warmGeo.setAttribute('position', new THREE.BufferAttribute(warmPos, 3));
-  const warmMat = new THREE.PointsMaterial({
-    size: 0.06,
-    color: 0xf59e0b,
-    transparent: true,
-    opacity: 0.55,
-    sizeAttenuation: true,
-    depthWrite: false
-  });
-  const warmPoints = new THREE.Points(warmGeo, warmMat);
-  scene.add(warmPoints);
 
   function resize() {
     const parent = canvas.parentElement;
@@ -134,19 +107,8 @@
     }
     accentGeo.attributes.position.needsUpdate = true;
 
-    const wPos = warmGeo.attributes.position.array;
-    for (let i = 0; i < warmCount; i++) {
-      wPos[i * 3] += warmVel[i].x;
-      wPos[i * 3 + 1] += warmVel[i].y;
-      wPos[i * 3 + 2] += warmVel[i].z;
-      if (Math.abs(wPos[i * 3]) > 6.5) warmVel[i].x *= -1;
-      if (Math.abs(wPos[i * 3 + 1]) > 3.5) warmVel[i].y *= -1;
-    }
-    warmGeo.attributes.position.needsUpdate = true;
-
     points.rotation.y += 0.0004;
     accentPoints.rotation.y -= 0.0006;
-    warmPoints.rotation.y += 0.0008;
 
     renderer.render(scene, camera);
   }

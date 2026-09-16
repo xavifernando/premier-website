@@ -33,7 +33,7 @@
         roughness: 0.4
       }),
       accent: new THREE.MeshStandardMaterial({
-        color: 0x0ea5e9,
+        color: 0x2b7de9,
         metalness: 0.5,
         roughness: 0.35,
         emissive: 0x3a0808,

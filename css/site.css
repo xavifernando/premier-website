@@ -30,19 +30,10 @@
 }
 
 .hero-copy h1 {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  line-height: 1.02;
+  font-size: clamp(2.5rem, 6vw, 4.25rem);
+  line-height: 1.05;
   margin-bottom: var(--space-lg);
   color: var(--color-text);
-  letter-spacing: -0.03em;
-}
-
-.hero-copy h1 em {
-  background: linear-gradient(120deg, var(--color-accent), var(--color-warm));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
 }
 
 .hero-lead {
@@ -50,7 +41,6 @@
   max-width: 42ch;
   margin-bottom: var(--space-xl);
   color: var(--color-text-muted);
-  line-height: 1.7;
 }
 
 .hero-actions {
@@ -71,11 +61,11 @@
 .plating-line {
   width: 100%;
   max-width: 480px;
-  background: linear-gradient(165deg, #0e1420 0%, #080c14 100%);
+  background: linear-gradient(165deg, #121820 0%, #0a0e14 100%);
   border: 1px solid var(--color-border-strong);
   border-radius: var(--radius-xl);
   padding: var(--space-lg) var(--space-md);
-  box-shadow: var(--shadow-lg), 0 0 60px rgba(14, 165, 233, 0.05);
+  box-shadow: var(--shadow-lg), 0 0 60px rgba(212, 175, 55, 0.06);
   position: relative;
   overflow: hidden;
 }
@@ -84,7 +74,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 80%, rgba(14, 165, 233, 0.06), transparent 55%);
+  background: radial-gradient(ellipse at 50% 80%, rgba(212, 175, 55, 0.08), transparent 55%);
   pointer-events: none;
 }
 
@@ -103,8 +93,8 @@
   align-items: center;
   gap: 6px;
   font-family: var(--font-mono);
-  font-size: 0.64rem;
-  letter-spacing: 0.12em;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
   color: var(--color-success);
   font-weight: 500;
 }
@@ -120,8 +110,8 @@
 
 .line-process {
   font-family: var(--font-mono);
-  font-size: 0.64rem;
-  letter-spacing: 0.16em;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
   color: var(--color-accent);
   font-weight: 500;
 }
@@ -146,7 +136,7 @@
     var(--color-metal-dim) 92%,
     transparent);
   border-radius: 2px;
-  box-shadow: 0 0 12px rgba(200, 214, 230, 0.12);
+  box-shadow: 0 0 12px rgba(200, 214, 230, 0.15);
 }
 
 .line-stages {
@@ -195,8 +185,8 @@
 }
 
 .stage--plate {
-  border-color: rgba(14, 165, 233, 0.35);
-  background: linear-gradient(180deg, rgba(14, 165, 233, 0.12), var(--color-bg-card));
+  border-color: rgba(43, 125, 233, 0.4);
+  background: linear-gradient(180deg, rgba(43, 125, 233, 0.15), var(--color-bg-card));
 }
 
 .stage--plate span {
@@ -220,7 +210,7 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: rgba(125, 211, 252, 0.8);
+  background: rgba(120, 180, 240, 0.8);
   box-shadow: 0 0 6px var(--color-zinc-glow);
   animation: bubble-up 2.2s ease-in infinite;
 }
@@ -250,7 +240,7 @@
   position: absolute;
   width: 2px;
   height: 16px;
-  background: linear-gradient(180deg, transparent, #38bdf8, transparent);
+  background: linear-gradient(180deg, transparent, #60a5fa, transparent);
   opacity: 0;
   animation: arc-flash 2s ease-in-out infinite;
 }
@@ -289,7 +279,7 @@
   width: 28px;
   height: 20px;
   margin: 0 auto;
-  background: linear-gradient(145deg, #7dd3fc, #0ea5e9);
+  background: linear-gradient(145deg, #8ec5f0, #2b7de9);
   border-radius: 3px;
   box-shadow:
     0 2px 8px rgba(0, 0, 0, 0.5),
@@ -337,8 +327,8 @@
 
 .line-footer span {
   font-family: var(--font-mono);
-  font-size: 0.56rem;
-  letter-spacing: 0.12em;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
   color: var(--color-text-dim);
 }
 
@@ -348,8 +338,8 @@
   gap: 8px;
   margin-top: var(--space-lg);
   font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.14em;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
   color: var(--color-text-dim);
 }
 
@@ -492,17 +482,12 @@
   flex-direction: column;
   gap: 2px;
   font-size: 0.95rem;
-  padding-bottom: var(--space-sm);
-}
-
-.contact-details p:not(:last-child) {
-  border-bottom: 1px dashed var(--color-border);
 }
 
 .contact-details span {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
   color: var(--color-text-dim);
 }
 

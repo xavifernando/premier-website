@@ -1,92 +1,47 @@
 :root {
-  /* Base — premium dark industrial */
-  --color-bg: #06080e;
-  --color-bg-elevated: #0c1018;
-  --color-bg-card: #0e1420;
-  --color-bg-card-hover: #141c2a;
-  --color-surface: #111924;
-  --color-border: rgba(120, 160, 210, 0.08);
-  --color-border-strong: rgba(120, 160, 210, 0.18);
-  --color-border-focus: rgba(14, 165, 233, 0.5);
-
-  /* Text */
-  --color-text: #f0f4f8;
-  --color-text-muted: #8da2b8;
-  --color-text-dim: #5a7088;
-
-  /* Brand — refined teal-blue */
-  --color-accent: #0ea5e9;
-  --color-accent-hover: #38bdf8;
-  --color-accent-muted: rgba(14, 165, 233, 0.12);
-  --color-accent-glow: rgba(14, 165, 233, 0.35);
-  --color-accent-deep: #0369a1;
-
-  /* Warm accent — amber/gold for highlights */
-  --color-warm: #f59e0b;
-  --color-warm-muted: rgba(245, 158, 11, 0.12);
-  --color-warm-glow: rgba(245, 158, 11, 0.3);
-
-  /* Zinc / plating metals */
-  --color-zinc: #7dd3fc;
-  --color-zinc-bright: #bae6fd;
-  --color-zinc-glow: rgba(125, 211, 252, 0.35);
-  --color-metal: #cbd5e1;
-  --color-metal-bright: #f1f5f9;
-  --color-metal-dim: #64748b;
-  --color-chrome: #f8fafc;
-
-  /* Status */
-  --color-success: #10b981;
-  --color-success-glow: rgba(16, 185, 129, 0.3);
-  --color-blue: #0ea5e9;
-  --color-yellow: #f59e0b;
-  --color-black-finish: #18181b;
-
-  /* Typography */
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
-
-  /* Spacing */
+  --bg: #060a12;
+  --bg-elevated: #0a1220;
+  --bg-card: #0e1828;
+  --bg-card-hover: #142236;
+  --surface: #121c30;
+  --border: rgba(120, 170, 220, 0.12);
+  --border-strong: rgba(120, 170, 220, 0.24);
+  --text: #eef4fb;
+  --text-muted: #9bb0c8;
+  --text-dim: #6a829c;
+  --accent: #2b7de9;
+  --accent-hover: #4b96f5;
+  --accent-muted: rgba(43, 125, 233, 0.16);
+  --accent-glow: rgba(43, 125, 233, 0.4);
+  --accent-deep: #1b4f8a;
+  --metal: #c5d6e8;
+  --metal-bright: #e8f1fa;
+  --success: #22c55e;
+  --success-glow: rgba(34, 197, 94, 0.35);
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Syne", "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
   --space-lg: 1.5rem;
   --space-xl: 2rem;
-  --space-2xl: 2.75rem;
-  --space-3xl: 4rem;
-  --space-4xl: 5.5rem;
-
-  /* Layout */
-  --container-max: 1140px;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+  --space-4xl: 6rem;
+  --container: 1120px;
   --container-wide: 1280px;
-  --header-height: 72px;
+  --header-h: 72px;
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
   --radius-xl: 24px;
-
-  /* Motion */
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
-  --duration-fast: 150ms;
-  --duration: 280ms;
-  --duration-slow: 480ms;
-
-  /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 0 40px var(--color-accent-glow);
-  --shadow-zinc: 0 0 32px var(--color-zinc-glow);
-  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
-  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.4), 0 16px 48px rgba(0, 0, 0, 0.35);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration: 320ms;
+  --duration-slow: 600ms;
+  --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 48px var(--accent-glow);
 }
-
 @media (prefers-reduced-motion: reduce) {
-  :root {
-    --duration-fast: 0ms;
-    --duration: 0ms;
-    --duration-slow: 0ms;
-  }
+  :root { --duration: 0ms; --duration-slow: 0ms; }
 }
